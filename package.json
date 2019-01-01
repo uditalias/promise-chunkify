@@ -1,0 +1,45 @@
+{
+  "name": "promise-chunkify",
+  "version": "1.0.0",
+  "description": "Run Promises with concurrency",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "jest --color",
+    "test:watch": "jest --watch --color",
+    "tsc": "tsc",
+    "tsc:watch": "tsc -w",
+    "clean": "rimraf dist/",
+    "prepublishOnly": "npm run clean && tsc"
+  },
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/index.js",
+    "dist/index.js.map",
+    "dist/index.d.js"
+  ],
+  "keywords": [
+    "Promise",
+    "Promise.all",
+    "concurrency",
+    "concurrent"
+  ],
+  "author": {
+    "name": "Udi Talias",
+    "email": "udi.talias@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/com:uditalias/promise-chunkify.git"
+  },
+  "bugs": {
+    "url": "https://github.com/uditalias/promise-chunkify/issues"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "23.3.11",
+    "jest": "23.6.0",
+    "rimraf": "^2.6.2",
+    "ts-jest": "23.10.5",
+    "typescript": "3.2.2"
+  }
+}
