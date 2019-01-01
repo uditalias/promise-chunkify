@@ -10,9 +10,23 @@ describe('Promise Chunkify', () => {
             () => resolver(1),
             () => resolver(2, 200),
             () => resolver(3),
-        ], 1);
+        ], { concurrency: 1 });
 
         expect(results).toMatchSnapshot();
+    });
 
+    it('should delay between each chunk', async () => {
+
+        const now = performance.now()
+            , delay = 200
+            , factories = [
+                () => resolver(1),
+                () => resolver(2),
+                () => resolver(3),
+            ];
+
+        await chunkify(factories, { concurrency: 1, delayAfterEachChunk: delay });
+
+        expect(performance.now() - now).toBeGreaterThanOrEqual(delay * factories.length);
     });
 });
