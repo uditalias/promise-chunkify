@@ -24,11 +24,13 @@ async function chunkify<T = any>(factories: Array<PromiseFactory<T>>, options: I
     const chunksCount = Math.ceil(factories.length / concurrency)
         , results: T[] = [];
 
-    let chunk: Array<PromiseFactory<T>>;
+    let chunk: Array<PromiseFactory<T>>, cursor: number;
 
     for (let i = 0; i < chunksCount; i++) {
 
-        chunk = factories.slice(i * concurrency, i * concurrency + concurrency);
+        cursor = i * concurrency;
+
+        chunk = factories.slice(cursor, cursor + concurrency);
 
         results.push.apply(results, await applyAllFactories<T>(chunk));
 
