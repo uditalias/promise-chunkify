@@ -2,6 +2,7 @@
   "name": "promise-chunkify",
   "version": "1.0.0",
   "description": "Run Promises with concurrency",
+  "homepage": "https://github.com/uditalias/promise-chunkify#readme",
   "main": "dist/index.js",
   "scripts": {
     "test": "jest --color",
@@ -13,9 +14,7 @@
   },
   "types": "dist/index.d.ts",
   "files": [
-    "dist/index.js",
-    "dist/index.js.map",
-    "dist/index.d.js"
+    "dist"
   ],
   "keywords": [
     "Promise",
