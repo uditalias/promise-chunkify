@@ -3,6 +3,15 @@
 
 Like Promise.all, but with concurrency.
 
+<p>
+  <a href="https://travis-ci.org/uditalias/promise-chunkify"><img alt="Travis Status" src="https://img.shields.io/travis/uditalias/promise-chunkify/master.svg?label=build&maxAge=43200"></a>
+  <a href="https://www.npmjs.com/package/promise-chunkify"><img alt="NPM Version" src="https://img.shields.io/npm/v/promise-chunkify.svg?maxAge=43200"></a>
+<img alt="Depencencies" src="https://img.shields.io/badge/dependency-free-ff69b4.svg?maxAge=43200">
+  <a href="https://github.com/uditalias/promise-chunkify/blob/master/LICENSE"><img alt="License" src="https://img.shields.io/github/license/uditalias/promise-chunkify.svg?label=license&maxAge=43200"></a>
+</p>
+
+---
+
 ### Install
 `npm install --save promise-chunkify`
 
