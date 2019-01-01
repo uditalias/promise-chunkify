@@ -46,7 +46,7 @@ import chunkify from "promise-chunkify";
 Type: `number`
 
 Define the concurrency chunk size, if not defined, 0 or negative value,
-all promises will be resolved at once so just use `Promise.all([])` instead.
+all promises will apply at once so just use `Promise.all([])` instead.
 
 ##### delayAfterEachChunk  
 Type: `number`
